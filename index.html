@@ -10,8 +10,10 @@
 </head>
 <body>
     <div class="gb_q">
-        <span class="material-symbols-outlined" title="Google Account">account_circle</span>
-        <span class="material-symbols-outlined" title="Google apps">apps</span>
+        <span class="material-symbols-outlined" title="Google Account" name="morevt">account_circle</span>
+        <div class="headright"><p>Google Account</p></div>
+        <span class="material-symbols-outlined" title="Google apps" name="morevt">apps</span>
+        <div class="headright"><p>Google Apps</p></div>
         <a class="gb_s" href="https://www.google.co.th/imghp?hl=en&amp;tab=ri&amp;authuser=0&amp;ogbl">Images</a>
         <a class="gb_g" href="https://mail.google.com/mail/?tab=rm&amp;authuser=0&amp;ogbl">Gmail</a>
     </div>
@@ -20,13 +22,13 @@
     </div>
     <div class="searchContainer">
         <div class="searchIcon">
-            <i class="fa fa-search"></i>
+            <i class="fa fa-search" style="font-size:18px; margin-left: 10px;"></i>
         </div>
         <form action="" id="submit">
             <input type="text" placeholder="Search Google or type a URL" class="inputSearch">
         </form>
         <div class="voice">
-            <img src="images/google-voice.png" alt="voice">
+            <img src="images/google-voice.png" class="voice" alt="voice">
         </div>
         <div class="recentSearch">
             <div class="recentList">
@@ -143,7 +145,7 @@
         <input type="button" class="button" value="Customize Chrome" title="Customize Chrome">
         <div class="modal">
             <div class="modal-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button"></span>
             <h1>Customize this page</h1>
             </div>
         </div>
@@ -159,6 +161,7 @@
         this.classList.toggle('active');
     });
 }
+
 // show customize chrome
 const modal = document.querySelector(".modal");
 const button = document.querySelector(".button");
@@ -194,6 +197,8 @@ window.addEventListener("click", windowOnClick);
     }
     .modal h1{
         color: white;
+        margin-top: 210px;
+        margin-left: 165px;
     }
 
     .modal-content {
@@ -244,6 +249,25 @@ window.addEventListener("click", windowOnClick);
         margin-left: 5px;
     }
     .active + .text {
+        display: block;
+        position: absolute;
+    }
+    .headright{
+        display: none;
+        height: 300px;
+        width: 300px;
+        color:white;
+        background-color: rgba(0,0,0,.87);
+        border-radius:7px;
+        justify-content:center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .headright p{
+        margin-top: 140px;
+        margin-left: 100px;
+    }
+    .active + .headright {
         display: block;
         position: absolute;
     }
@@ -325,7 +349,7 @@ window.addEventListener("click", windowOnClick);
         padding: 5px;
         border: none;
         outline: none;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
     }
     .inputSearch:placeholder{
@@ -521,19 +545,10 @@ window.addEventListener("click", windowOnClick);
         margin-top: 28px;
         margin-left: 40px;
     }
-    #psearch{
-        position: absolute;
-        margin-top: 287px;
-        margin-left: 10px;
-        height: 20px;
-        width: 20px;
-    }
-    #pvoice{
-        position: absolute;
-        margin-top: 287px;
-        margin-left: -30px;
-        height: 20px;
-        width: 20px;
+    .voice{
+        height: 25px;
+        width: 25px;
+        margin-left: -10px;
     }
     .button_s{
         margin-left: 88%;
